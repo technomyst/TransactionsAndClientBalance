@@ -13,16 +13,13 @@ namespace Unistream_T4.Services
 {
     public class TransactionService : ITransactionService
     {
-        private readonly TransactionDbContext _dbContext;
         private readonly IMapper _mapper;
         private readonly ITransactionRepository _repository;
-        public TransactionService(TransactionDbContext dbContext, IMapper mapper, ITransactionRepository repository)
+        public TransactionService( IMapper mapper, ITransactionRepository repository)
         {
-            _dbContext=dbContext;
             _mapper=mapper;
             _repository=repository;
         }
-
 
         public async Task<AddTransactionResponseDto> AddDebitTransaction(TransactionDto transactionDto)
         {
