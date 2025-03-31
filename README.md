@@ -1,4 +1,4 @@
-# TransactionsAndClienBalances
+# TransactionsAndClientBalances
 Что можно улучшить:
 - Добавить паттерн Result, заменить часть ответов Exception на Result, где это возможно.
 - Сократить дублирование кода в TransactionRepository. Этому мешает два условия:
