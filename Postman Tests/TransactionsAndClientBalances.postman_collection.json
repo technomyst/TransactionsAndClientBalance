@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "792d0256-0c9d-471a-8804-6f174f992649",
+		"name": "UniStream_T4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39439360"
+	},
+	"item": [
+		{
+			"name": "Credit 100",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"clientId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateTime\": \"2025-03-27T09:00:58.535+05:00\",\r\n  \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"credit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debit 80",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"7e632374-61e9-41e8-aadd-93867446be7a\",\r\n  \"clientId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateTime\": \"2025-03-27T09:30:58.535+05:00\",\r\n  \"amount\": 80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"debit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debit 20",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"904cb0b8-7630-4154-8847-7d12c337d875\",\r\n  \"clientId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateTime\": \"2025-03-27T10:00:58.535+05:00\",\r\n  \"amount\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"debit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debit 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"9c134db3-2af7-42db-9336-fd640c40ae81\",\r\n  \"clientId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateTime\": \"2025-03-27T10:10:58.535+05:00\",\r\n  \"amount\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"debit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revert 80",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/revert?id=7e632374-61e9-41e8-aadd-93867446be7a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"revert"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7e632374-61e9-41e8-aadd-93867446be7a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5259/balance?id=3fa85f64-5717-4562-b3fc-2c963f66afa6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"balance"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AlwaysPositiveAmount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"clientId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateTime\": \"2025-03-27T09:00:58.535+05:00\",\r\n  \"amount\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"credit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotFutureDate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"7e632374-61e9-41e8-aadd-93867446be7a\",\r\n  \"clientId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateTime\": \"2026-03-27T09:30:58.535+05:00\",\r\n  \"amount\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"debit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TooBigDebit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"8ce785cd-5041-4ea7-bdfb-0e2f6e82213c\",\r\n  \"clientId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateTime\": \"2025-03-27T09:30:58.535+05:00\",\r\n  \"amount\": 1011\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"debit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client2 Debit 10",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"6bcbc63e-036c-40a2-9600-6406d1595f76\",\r\n  \"clientId\": \"6bcbc63e-036c-40a2-9600-6406d1595f76\",\r\n  \"dateTime\": \"2025-03-27T15:00:58.535+05:00\",\r\n  \"amount\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"debit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client2 Credit 101",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"f02e680b-38ce-43e6-a4cb-678f48fdda48\",\r\n  \"clientId\": \"6bcbc63e-036c-40a2-9600-6406d1595f76\",\r\n  \"dateTime\": \"2025-03-27T15:00:58.535+05:00\",\r\n  \"amount\": 101\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"credit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client2 Debit 20",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"9df8e6ed-67c2-4801-a324-96d91ecf939a\",\r\n  \"clientId\": \"6bcbc63e-036c-40a2-9600-6406d1595f76\",\r\n  \"dateTime\": \"2025-03-27T15:00:58.535+05:00\",\r\n  \"amount\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"debit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client2 Revert Credit 101",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5259/revert?id=f02e680b-38ce-43e6-a4cb-678f48fdda48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"revert"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "f02e680b-38ce-43e6-a4cb-678f48fdda48"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client 2 Credit 30",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"d0c39a13-2e0d-421b-911c-c6b9f7e19dca\",\r\n  \"clientId\": \"6bcbc63e-036c-40a2-9600-6406d1595f76\",\r\n  \"dateTime\": \"2025-03-27T15:00:58.535+05:00\",\r\n  \"amount\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"credit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5259/balance?id=6bcbc63e-036c-40a2-9600-6406d1595f76",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"balance"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6bcbc63e-036c-40a2-9600-6406d1595f76"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client2 Revert Credit 101",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5259/revert?id=f02e680b-38ce-43e6-a4cb-678f48fdda48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"revert"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "f02e680b-38ce-43e6-a4cb-678f48fdda48"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5259/balance?id=6bcbc63e-036c-40a2-9600-6406d1595f76",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"balance"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6bcbc63e-036c-40a2-9600-6406d1595f76"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance Wrong id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
