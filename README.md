@@ -1,4 +1,4 @@
-# TransactionsAndClientBalances
+<h1>TransactionsAndClientBalances</h1>
 Что можно улучшить:
 - Добавить паттерн Result, заменить часть ответов Exception на Result, где это возможно.
 - Сократить дублирование кода в TransactionRepository. Этому мешает два условия:
@@ -11,7 +11,7 @@
 ...
     
       
-#Исходное задание
+<h2>Исходное задание</h2>
 
 Дан interface, описывающий финансовую транзакцию:  
 <pre><code>public interface ITransaction  
