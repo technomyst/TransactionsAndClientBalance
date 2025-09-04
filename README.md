@@ -18,13 +18,15 @@
 <h2>Исходное задание</h2>
 
 <p>Дан interface, описывающий финансовую транзакцию:</p>
-<pre><code>public interface ITransaction  
+```csharp
+public interface ITransaction  
 {  
     Guid Id { get; }   
     Guid ClientId { get; }  
     DateTime DateTime { get; }  
     decimal Amount { get; }  
-}</code></pre> 
+}
+```
 
 Создайте реализации этого интерфейса CreditTransaction (зачисление средств клиенту), DebitTransaction
 (списание средств у клиента).
@@ -51,9 +53,6 @@ Response 200 OK:
 "clientBalance": 23.05  
 }
 ```
-
-
-
 ```
 POST /debit  
 {  
