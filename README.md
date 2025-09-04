@@ -48,30 +48,42 @@ Response 200 OK:
 }
 ```
 
+```
 POST /debit  
 {  
 "id":"05eb235c-4955-4c16-bcdd-34e8178228de",  
 "clientId": "cfaa0d3f-7fea-4423-9f69-ebff826e2f89",  
 "dateTime":"2019-04-02T13:10:25.0263632+03:00",  
 "amount":23.05  
-}  
+}
+```
+```
 Response 200 OK:  
 {  
 "insertDateTime": "2024-10-25T12:03:34+05:00",  
 "clientBalance": 0  
-}  
+}
+```
+```
 POST /revert?id=05eb235c-4955-4c16-bcdd-34e8178228de  
+```
+```
 Response 200 OK:  
 {  
 "revertDateTime": "2024-10-25T12:03:34+05:00",  
 "clientBalance": 23.05  
-}  
-GET /balance?id=05eb235c-4955-4c16-bcdd-34e8178228de  
+}
+```
+```
+GET /balance?id=05eb235c-4955-4c16-bcdd-34e8178228de
+```
+```
 Response 200 OK:  
 {  
 "balanceDateTime": "2024-10-25T12:03:34+05:00",  
 "clientBalance": 23.05  
-}  
+}
+```
 
 Методы POST должны быть идемпотентными: при повторной отправке запроса он должен
 возвращать результат отправки предыдущего запроса с таким же Id. 
