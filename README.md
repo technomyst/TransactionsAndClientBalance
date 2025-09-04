@@ -14,13 +14,13 @@
 #Исходное задание
 
 Дан interface, описывающий финансовую транзакцию:  
-public interface ITransaction  
+<pre><code>public interface ITransaction  
 {  
 Guid Id { get; }   
 Guid ClientId { get; }  
 DateTime DateTime { get; }  
 decimal Amount { get; }  
-}  
+}</code></pre> 
 Создайте реализации этого интерфейса CreditTransaction (зачисление средств клиенту), DebitTransaction
 (списание средств у клиента). Напишите Web API, позволяющее зачислять и списывать средства у
 указанного клиента, отменять указанную транзакцию и получать актуальный баланс клиента. В сервисе
